@@ -10,31 +10,16 @@
           사이트입니다.
         </p>
         <ul>
-          <li>
-            <a href="/">위스키 사이트</a>
-          </li>
-          <li>
-            <a href="/">와인 사이트</a>
-          </li>
-          <li>
-            <a href="/">소주 사이트</a>
-          </li>
-          <li>
-            <a href="/">맥주 사이트</a>
-          </li>
-          <li>
-            <a href="/">막걸리 사이트</a>
-          </li>
-          <li>
-            <a href="/">고량주 사이트</a>
+          <li v-for="title in imgText" v-bind:key="title.text">
+            <a href="/">{{ title.text }}</a>
           </li>
         </ul>
       </div>
       <div class="imgText__img img1">
-        <a href="/">위스키 사이트</a>
+        <a href="/">{{ imgText[0].text }}</a>
       </div>
       <div class="imgText__img img2">
-        <a href="/" class="blue"> 와인 사이트 </a>
+        <a href="/" class="blue"> {{ imgText[1].text }} </a>
       </div>
     </div>
   </section>
@@ -44,6 +29,18 @@ export default {
   props: {
     attr: String,
     layout: String,
+  },
+  data: function () {
+    return {
+      imgText: [
+        { text: "위스키 사이트" },
+        { text: "와인 사이트" },
+        { text: "소주 사이트" },
+        { text: "맥주 사이트" },
+        { text: "막걸리 사이트" },
+        { text: "고량주 사이트" },
+      ],
+    };
   },
 };
 </script>

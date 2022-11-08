@@ -17,18 +17,16 @@
       <swiper-slide
         ><div class="swiper-slide img1">
           <div class="desc">
-            <span>ALCOHOL</span>
-            <h3>WEDDING SEASON</h3>
+            <span>{{ slider[0].text }}</span>
+            <h3>{{ slider[1].text }}</h3>
             <p>
-              VARIETY OF DRINKS
+              {{ slider[2].text }}
               <br />
-              세상에 아주 다양한 술들이 있습니다.
-              <br />
-              지금 만나러 가시죠
+              {{ slider[3].text }}
             </p>
             <div class="btn">
-              <a href="/">자세히 보기</a>
-              <a href="/" class="black"> 사이트 보기 </a>
+              <a href="/">{{ slider[4].text }}</a>
+              <a href="/" class="black"> {{ slider[5].text }} </a>
             </div>
           </div>
         </div></swiper-slide
@@ -36,18 +34,16 @@
       <swiper-slide
         ><div class="swiper-slide img2">
           <div class="desc">
-            <span>ALCOHOL</span>
-            <h3>WEDDING SEASON</h3>
+            <span>{{ slider[0].text }}</span>
+            <h3>{{ slider[1].text }}</h3>
             <p>
-              VARIETY OF DRINKS
+              {{ slider[2].text }}
               <br />
-              세상에 아주 다양한 술들이 있습니다.
-              <br />
-              지금 만나러 가시죠
+              {{ slider[3].text }}
             </p>
             <div class="btn">
-              <a href="/">자세히 보기</a>
-              <a href="/" class="black"> 사이트 보기 </a>
+              <a href="/">{{ slider[4].text }}</a>
+              <a href="/" class="black"> {{ slider[5].text }} </a>
             </div>
           </div>
         </div></swiper-slide
@@ -55,18 +51,16 @@
       <swiper-slide
         ><div class="swiper-slide img3">
           <div class="desc">
-            <span>ALCOHOL</span>
-            <h3>WEDDING SEASON</h3>
+            <span>{{ slider[0].text }}</span>
+            <h3>{{ slider[1].text }}</h3>
             <p>
-              VARIETY OF DRINKS
+              {{ slider[2].text }}
               <br />
-              세상에 아주 다양한 술들이 있습니다.
-              <br />
-              지금 만나러 가시죠
+              {{ slider[3].text }}
             </p>
             <div class="btn">
-              <a href="/">자세히 보기</a>
-              <a href="/" class="black"> 사이트 보기 </a>
+              <a href="/">{{ slider[4].text }}</a>
+              <a href="/" class="black"> {{ slider[5].text }} </a>
             </div>
           </div>
         </div></swiper-slide
@@ -93,6 +87,18 @@ export default {
   setup() {
     return {
       modules: [Autoplay, Pagination, Navigation],
+    };
+  },
+  data: function () {
+    return {
+      slider: [
+        { text: "ALCOHOL" },
+        { text: "DRINKS" },
+        { text: "세상에 아주 다양한 술들이 있습니다." },
+        { text: "지금 만나러 가시죠" },
+        { text: "자세히 보기" },
+        { text: "사이트 보기" },
+      ],
     };
   },
 };
@@ -123,7 +129,7 @@ export default {
 
 .swiper-slide .desc span {
   font-size: 16px;
-  background-color: #fac4f8;
+  background-color: #fff;
   padding: 1px 14px 0 14px;
   border-radius: 30px;
   text-transform: uppercase;

@@ -2,14 +2,14 @@
   <section id="bannerType" class="banner__wrap" :class="fonts">
     <h2 class="blind">배너 영역</h2>
     <div class="banner__inner">
-      <h3 class="title">술믈리에 이XX</h3>
+      <h3 class="title">{{ banners[0].title }}</h3>
       <p class="desc">
-        더 다양한 정보는 구글링 해보시길 바랍니다.
+        {{ banners[1].desc }}
         <a href="https://younghwan112.tistory.com/" title="블로그로 이동">
-          https://google.co.kr/
+          {{ banners[2].link }}
         </a>
       </p>
-      <span class="small">배너 유형01</span>
+      <span class="small">{{ banners[3].cate }}</span>
     </div>
   </section>
 </template>
@@ -17,6 +17,16 @@
 export default {
   props: {
     fonts: String,
+  },
+  data: function () {
+    return {
+      banners: [
+        { title: "술믈리에 이XX" },
+        { desc: "더 다양한 정보는 구글링 해보시길 바랍니다." },
+        { link: "https://younghwan112.tistory.com/" },
+        { cate: "배너 유형01" },
+      ],
+    };
   },
 };
 </script>
