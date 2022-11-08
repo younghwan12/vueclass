@@ -15,12 +15,17 @@
           </li>
         </ul>
       </div>
-      <div class="imgText__img img1">
-        <a href="/">{{ imgText[0].text }}</a>
+      <div
+        class="imgText__img"
+        :class="text.style"
+        v-for="text in imgText2"
+        v-bind:key="text.text"
+      >
+        <a href="/">{{ text.desc }}</a>
       </div>
-      <div class="imgText__img img2">
+      <!-- <div class="imgText__img img2">
         <a href="/" class="blue"> {{ imgText[1].text }} </a>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
@@ -39,6 +44,10 @@ export default {
         { text: "맥주 사이트" },
         { text: "막걸리 사이트" },
         { text: "고량주 사이트" },
+      ],
+      imgText2: [
+        { style: "img1", desc: "위스키 사이트" },
+        { style: "img2", desc: "와인 사이트" },
       ],
     };
   },

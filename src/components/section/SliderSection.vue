@@ -14,19 +14,19 @@
       :modules="modules"
       class="mySwiper"
     >
-      <swiper-slide
-        ><div class="swiper-slide img1">
+      <swiper-slide v-for="slider in sliders" v-bind:key="slider.text"
+        ><div class="swiper-slide" :class="slider.class">
           <div class="desc">
-            <span>{{ slider[0].text }}</span>
-            <h3>{{ slider[1].text }}</h3>
+            <span>{{ slider.subtitle }}</span>
+            <h3>{{ slider.title }}</h3>
             <p>
-              {{ slider[2].text }}
+              {{ slider.desc1 }}
               <br />
-              {{ slider[3].text }}
+              {{ slider.desc2 }}
             </p>
             <div class="btn">
-              <a href="/">{{ slider[4].text }}</a>
-              <a href="/" class="black"> {{ slider[5].text }} </a>
+              <a href="/">{{ slider.btn1 }}</a>
+              <a href="/" class="black"> {{ slider.btn2 }} </a>
             </div>
           </div>
         </div></swiper-slide
@@ -91,13 +91,34 @@ export default {
   },
   data: function () {
     return {
-      slider: [
-        { text: "ALCOHOL" },
-        { text: "DRINKS" },
-        { text: "세상에 아주 다양한 술들이 있습니다." },
-        { text: "지금 만나러 가시죠" },
-        { text: "자세히 보기" },
-        { text: "사이트 보기" },
+      sliders: [
+        {
+          class: "img1",
+          subtitle: "ALCOHOL",
+          title: "DRINKS",
+          desc1: "세상에 아주 다양한 술들이 있습니다.",
+          desc2: "지금 만나러 가시죠",
+          btn1: "자세히 보기",
+          btn2: "사이트 보기",
+        },
+        {
+          class: "img2",
+          subtitle: "ALCOHOL",
+          title: "DRINKS",
+          desc1: "세상에 아주 다양한 술들이 있습니다.",
+          desc2: "지금 만나러 가시죠",
+          btn1: "자세히 보기",
+          btn2: "사이트 보기",
+        },
+        {
+          class: "img3",
+          subtitle: "ALCOHOL",
+          title: "DRINKS",
+          desc1: "세상에 아주 다양한 술들이 있습니다.",
+          desc2: "지금 만나러 가시죠",
+          btn1: "자세히 보기",
+          btn2: "사이트 보기",
+        },
       ],
     };
   },
