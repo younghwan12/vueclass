@@ -31,7 +31,7 @@
           </div>
         </div></swiper-slide
       >
-      <swiper-slide
+      <!-- <swiper-slide
         ><div class="swiper-slide img2">
           <div class="desc">
             <span>{{ slider[0].text }}</span>
@@ -64,7 +64,7 @@
             </div>
           </div>
         </div></swiper-slide
-      >
+      > -->
     </swiper>
   </div>
 </template>

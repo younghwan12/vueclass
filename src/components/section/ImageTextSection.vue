@@ -3,11 +3,10 @@
     <h2 class="blind">유용한 사이트 살펴보기</h2>
     <div class="imgText__inner" :class="layout">
       <div class="imgText__txt">
-        <span>이미지 텍스트 유형01</span>
-        <h3>다양한 술 종류 알아보기</h3>
+        <span>{{ title[0].type }}</span>
+        <h3>{{ title[0].title }}</h3>
         <p>
-          다양한 술의 종류들에 대해서 알아볼 수 있으며 그에 따른 전문
-          사이트입니다.
+          {{ title[0].desc }}
         </p>
         <ul>
           <li v-for="title in imgText" v-bind:key="title.text">
@@ -37,6 +36,13 @@ export default {
   },
   data: function () {
     return {
+      title: [
+        {
+          type: "이미지 텍스트 유형01",
+          title: "다양한 술 종류 알아보기",
+          desc: "다양한 술의 종류들에 대해서 알아볼 수 있으며 그에 따른 전문 사이트입니다.",
+        },
+      ],
       imgText: [
         { text: "위스키 사이트" },
         { text: "와인 사이트" },
